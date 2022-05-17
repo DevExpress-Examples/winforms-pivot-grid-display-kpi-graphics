@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding1 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding2 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding3 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
             this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
-            this.nwindDataSet = new WindowsFormsApp_RegularDataSourceKPI.nwindDataSet();
             this.salesPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nwindDataSet = new WindowsFormsApp_RegularDataSourceKPI.nwindDataSet();
+            this.fieldCategoryName = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldExtendedPrice = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldSalesPerson = new DevExpress.XtraPivotGrid.PivotGridField();
             this.salesPersonTableAdapter = new WindowsFormsApp_RegularDataSourceKPI.nwindDataSetTableAdapters.SalesPersonTableAdapter();
-            this.fieldCategoryName1 = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldExtendedPrice1 = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldSalesPerson1 = new DevExpress.XtraPivotGrid.PivotGridField();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nwindDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesPersonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nwindDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pivotGridControl1
@@ -46,51 +49,55 @@
             this.pivotGridControl1.DataSource = this.salesPersonBindingSource;
             this.pivotGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pivotGridControl1.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
-            this.fieldCategoryName1,
-            this.fieldExtendedPrice1,
-            this.fieldSalesPerson1});
+            this.fieldCategoryName,
+            this.fieldExtendedPrice,
+            this.fieldSalesPerson});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
+            this.pivotGridControl1.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized;
             this.pivotGridControl1.Size = new System.Drawing.Size(383, 292);
             this.pivotGridControl1.TabIndex = 0;
-            // 
-            // nwindDataSet
-            // 
-            this.nwindDataSet.DataSetName = "nwindDataSet";
-            this.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // salesPersonBindingSource
             // 
             this.salesPersonBindingSource.DataMember = "SalesPerson";
             this.salesPersonBindingSource.DataSource = this.nwindDataSet;
             // 
+            // nwindDataSet
+            // 
+            this.nwindDataSet.DataSetName = "nwindDataSet";
+            this.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fieldCategoryName
+            // 
+            this.fieldCategoryName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldCategoryName.AreaIndex = 0;
+            this.fieldCategoryName.Caption = "Category Name";
+            dataSourceColumnBinding1.ColumnName = "CategoryName";
+            this.fieldCategoryName.DataBinding = dataSourceColumnBinding1;
+            this.fieldCategoryName.Name = "fieldCategoryName";
+            this.fieldCategoryName.Width = 178;
+            // 
+            // fieldExtendedPrice
+            // 
+            this.fieldExtendedPrice.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldExtendedPrice.AreaIndex = 0;
+            this.fieldExtendedPrice.Caption = "Extended Price";
+            dataSourceColumnBinding2.ColumnName = "Extended Price";
+            this.fieldExtendedPrice.DataBinding = dataSourceColumnBinding2;
+            this.fieldExtendedPrice.Name = "fieldExtendedPrice";
+            // 
+            // fieldSalesPerson
+            // 
+            this.fieldSalesPerson.AreaIndex = 0;
+            this.fieldSalesPerson.Caption = "Sales Person";
+            dataSourceColumnBinding3.ColumnName = "Sales Person";
+            this.fieldSalesPerson.DataBinding = dataSourceColumnBinding3;
+            this.fieldSalesPerson.Name = "fieldSalesPerson";
+            // 
             // salesPersonTableAdapter
             // 
             this.salesPersonTableAdapter.ClearBeforeFill = true;
-            // 
-            // fieldCategoryName1
-            // 
-            this.fieldCategoryName1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldCategoryName1.AreaIndex = 0;
-            this.fieldCategoryName1.Caption = "Category Name";
-            this.fieldCategoryName1.FieldName = "CategoryName";
-            this.fieldCategoryName1.Name = "fieldCategoryName1";
-            this.fieldCategoryName1.Width = 178;
-            // 
-            // fieldExtendedPrice1
-            // 
-            this.fieldExtendedPrice1.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
-            this.fieldExtendedPrice1.AreaIndex = 0;
-            this.fieldExtendedPrice1.Caption = "Extended Price";
-            this.fieldExtendedPrice1.FieldName = "Extended Price";
-            this.fieldExtendedPrice1.Name = "fieldExtendedPrice1";
-            // 
-            // fieldSalesPerson1
-            // 
-            this.fieldSalesPerson1.AreaIndex = 0;
-            this.fieldSalesPerson1.Caption = "Sales Person";
-            this.fieldSalesPerson1.FieldName = "Sales Person";
-            this.fieldSalesPerson1.Name = "fieldSalesPerson1";
             // 
             // Form1
             // 
@@ -102,8 +109,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nwindDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesPersonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nwindDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -114,9 +121,9 @@
         private nwindDataSet nwindDataSet;
         private System.Windows.Forms.BindingSource salesPersonBindingSource;
         private nwindDataSetTableAdapters.SalesPersonTableAdapter salesPersonTableAdapter;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldCategoryName1;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldExtendedPrice1;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldSalesPerson1;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldCategoryName;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldExtendedPrice;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldSalesPerson;
     }
 }
 
