@@ -1,5 +1,7 @@
-﻿Namespace WindowsFormsApp_RegularDataSourceKPI
-    Partial Public Class Form1
+Namespace WindowsFormsApp_RegularDataSourceKPI
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+'#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -31,16 +33,16 @@
             Me.fieldCategoryName1 = New DevExpress.XtraPivotGrid.PivotGridField()
             Me.fieldExtendedPrice1 = New DevExpress.XtraPivotGrid.PivotGridField()
             Me.fieldSalesPerson1 = New DevExpress.XtraPivotGrid.PivotGridField()
-            DirectCast(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.salesPersonBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.pivotGridControl1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.nwindDataSet), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.salesPersonBindingSource), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' pivotGridControl1
             ' 
             Me.pivotGridControl1.DataSource = Me.salesPersonBindingSource
             Me.pivotGridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.pivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() { Me.fieldCategoryName1, Me.fieldExtendedPrice1, Me.fieldSalesPerson1})
+            Me.pivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() {Me.fieldCategoryName1, Me.fieldExtendedPrice1, Me.fieldSalesPerson1})
             Me.pivotGridControl1.Location = New System.Drawing.Point(0, 0)
             Me.pivotGridControl1.Name = "pivotGridControl1"
             Me.pivotGridControl1.Size = New System.Drawing.Size(383, 292)
@@ -92,22 +94,26 @@
             Me.Controls.Add(Me.pivotGridControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            DirectCast(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.salesPersonBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+            CType((Me.pivotGridControl1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.nwindDataSet), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.salesPersonBindingSource), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+'#End Region
         Private pivotGridControl1 As DevExpress.XtraPivotGrid.PivotGridControl
-        Private nwindDataSet As nwindDataSet
+
+        Private nwindDataSet As WindowsFormsApp_RegularDataSourceKPI.nwindDataSet
+
         Private salesPersonBindingSource As System.Windows.Forms.BindingSource
-        Private salesPersonTableAdapter As nwindDataSetTableAdapters.SalesPersonTableAdapter
+
+        Private salesPersonTableAdapter As WindowsFormsApp_RegularDataSourceKPI.nwindDataSetTableAdapters.SalesPersonTableAdapter
+
         Private fieldCategoryName1 As DevExpress.XtraPivotGrid.PivotGridField
+
         Private fieldExtendedPrice1 As DevExpress.XtraPivotGrid.PivotGridField
+
         Private fieldSalesPerson1 As DevExpress.XtraPivotGrid.PivotGridField
     End Class
 End Namespace
-
