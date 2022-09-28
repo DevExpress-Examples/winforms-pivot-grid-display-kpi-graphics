@@ -55,7 +55,7 @@
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
             this.pivotGridControl1.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized;
-            this.pivotGridControl1.Size = new System.Drawing.Size(383, 292);
+            this.pivotGridControl1.Size = new System.Drawing.Size(667, 304);
             this.pivotGridControl1.TabIndex = 0;
             // 
             // salesPersonBindingSource
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 292);
+            this.ClientSize = new System.Drawing.Size(667, 304);
             this.Controls.Add(this.pivotGridControl1);
             this.Name = "Form1";
             this.Text = "Form1";

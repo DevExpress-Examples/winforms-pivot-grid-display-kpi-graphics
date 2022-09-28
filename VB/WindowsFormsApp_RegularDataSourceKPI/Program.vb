@@ -1,5 +1,6 @@
 Imports System
 Imports System.Windows.Forms
+Imports DevExpress.LookAndFeel
 
 Namespace WindowsFormsApp_RegularDataSourceKPI
 
@@ -10,6 +11,7 @@ Namespace WindowsFormsApp_RegularDataSourceKPI
         ''' </summary>
         <STAThread>
         Sub Main()
+            UserLookAndFeel.Default.SetSkinStyle(SkinStyle.WXI)
             Call Application.EnableVisualStyles()
             Application.SetCompatibleTextRenderingDefault(False)
             Call Application.Run(New Form1())
