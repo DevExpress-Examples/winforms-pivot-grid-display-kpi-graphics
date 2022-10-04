@@ -1,6 +1,6 @@
+Imports DevExpress.LookAndFeel
 Imports System
 Imports System.Windows.Forms
-Imports DevExpress.LookAndFeel
 
 Namespace WindowsFormsApp_RegularDataSourceKPI
 
