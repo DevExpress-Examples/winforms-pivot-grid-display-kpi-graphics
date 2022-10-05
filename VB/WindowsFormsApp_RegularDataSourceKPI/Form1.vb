@@ -6,9 +6,11 @@ Namespace WindowsFormsApp_RegularDataSourceKPI
 
     Public Partial Class Form1
         Inherits Form
+
         Public Sub New()
             InitializeComponent()
         End Sub
+
         Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs)
             ' Binds the Pivot Grid to data.
             salesPersonTableAdapter.Fill(nwindDataSet.SalesPerson)
