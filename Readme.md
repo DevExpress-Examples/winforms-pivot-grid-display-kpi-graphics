@@ -20,7 +20,7 @@ To display KPI graphics, create a Pivot Grid field and bind it to the following 
 
 `(Iif(Sum([{0}])<100000,-1,Iif(Sum([{0}])<150000,0,1)))", fieldExtendedPrice.ExpressionFieldName)`
 
-The field values depend on the "Extended Price" field values. If the "Extended Price" field value is less than 100000, the field value is "-1". If the "Extended Price" field value is less than 150000, the field value is "0". In other cases, the field value is "1".</p>
+The field values depend on the "Extended Price" field values. If the "Extended Price" field value is less than 100000, the field value is "-1". If the "Extended Price" field value is less than 150000, the field value is "0". In other cases, the field value is "1".
 
 Use the [PivotGridFieldBase.KPIGraphic](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPivotGrid.PivotGridFieldBase.KPIGraphic) property to specify a graphic set used to visualize field values.
 
